@@ -1,0 +1,22 @@
+
+
+
+
+
+export const UPLOAD_FILES_DESTINATION = "../filesFolder" ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
