@@ -17,32 +17,27 @@ export const ERROR_TYPES = {
     UNAUTHORIZED: "UNAUTHORIZED",
 };
 
-
 export const SOCKET_EVENTS = {
     CONNECTION: "connection",
     DISCONNECT: "disconnect",
-    CHAT_MESSAGE: "chat message",
-    WELCOME: "welcome",
-    USER_TYPING: "user is typing",
-    JOIN_ROOM: "join room",
-    LEAVE_ROOM: "leave room",
-    USER_LOGIN: "user login",
-    USER_LOGOUT: "user logout",
-    USER_STATUS_UPDATE: "user status update",
-
-    // for group events
-    JOIN_GROUP: "joinGroup",
-    SEND_GROUP_MESSAGE: "sendGroupMessage",
-    GROUP_MESSAGE_RECEIVED: "groupMessageReceived",
-    NEW_GROUP_CREATED: "newGroupCreated",
+    
+    JOIN_ROOM: "joinRoom",
+    SEND_MESSAGE: "send Message",
+    CHAT_MESSAGE: "chat Message",
+    
+    JOIN_GROUP: "join Group",
+    SEND_GROUP_MESSAGE: "send Group Message",
+    GROUP_MESSAGE_RECEIVED: "group Message Received",
+    
+    USER_STATUS_CHANGED: "user Status Changed",
 };
 
 
 
 
 
-
-
+export const allowedFileExtensions = [".jpg", ".jpeg", ".gif", ".png", ".pdf"] ; 
+export const FILE_ERROR_MESSAGE = "Invalid file type. Only JPG, JPEG, GIF, PNG, and PDF files are allowed." ;
 
 
 

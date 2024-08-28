@@ -53,10 +53,32 @@ export const RESPONSE_MESSAGE = {
     GROUP_MEMBERS_NOT_FOUND : "Group members not found " ,
     GROUP_MEMBERS_FETCHED : "Group members fetched " ,
 
+
+    // // files realted messages
+    FILE_UPLOADED_SUCCESSFULLY : "Files uploaded successfully" ,
+    FAILED_TO_UPLOAD_FILE : "Failed to upload some files" ,
+    NO_FILES_PROVIDED : "No files provided" ,
+    ERROR_DURING_FILE_SAVE : "Error during file save" ,
+
+    // User status messages
+    USER_ONLINE: "User is online",
+    USER_OFFLINE: "User is offline",
+    LAST_SEEN_UPDATED: "User's last seen status updated",
+
+
+
+    // Socket related error messages
+    ERROR_UPDATING_STATUS: "Error updating user status",
+    ERROR_JOINING_ROOM: "Error joining room",
+    ERROR_SENDING_MESSAGE: "Error sending message",
+    ERROR_JOINING_GROUP: "Error joining group",
+    ERROR_SENDING_GROUP_MESSAGE: "Error sending group message",
+    ERROR_UPDATING_STATUS_ON_DISCONNECT: "Error updating user status on disconnect",
+
+
+
+
 } ;   
-
-
-
 
 
 

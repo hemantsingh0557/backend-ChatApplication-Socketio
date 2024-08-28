@@ -3,7 +3,9 @@
 
 import jwt from "jsonwebtoken" ; 
 import config from "../config/index.js";
-
+import nodeMailer from "nodemailer" ;
+import { allowedFileExtensions, FILE_ERROR_MESSAGE } from "./constants.js";
+import path from "path";
 
 
 export const generateJWTAccessToken = (jwtPayloadObject) => {
@@ -51,5 +53,57 @@ export const validateSchema = (schema) => {
 } ;
 
 
+
+
+
+
+
+export const generateOtp = () => {
+    return Math.floor( 100000 + Math.random() * 900000 ).toString() ;
+};
+
+
+export const sendEmail = async(options) => {
+
+    const transporter = nodeMailer.createTransport({
+        host: process.env.SMPT_HOST,
+        port: process.env.SMPT_PORT,
+        secure: true, // Use SSL for port 465
+        auth: {
+            user: process.env.SMPT_MAIL,
+            pass: process.env.SMPT_APP_PASS,
+        },
+        authMethod: "LOGIN", // Specify the authentication method
+    });
+
+    const mailOptions = {
+        from: process.env.SMPT_MAIL,
+        to: options.to,
+        subject: options.subject,
+        html: options.message,
+    };
+
+    await transporter.sendMail(mailOptions);
+   
+};
+
+
+
+
+
+
+const validateFileExtension = (filename) => {
+    const fileExtension = path.extname(filename).toLowerCase();
+    return allowedFileExtensions.includes(fileExtension);
+};
+
+export const fileFilter = (req, file, cb) => {
+    if (validateFileExtension(file.originalname)) {
+        cb(null, true); 
+    } 
+    else {
+        cb(new Error(FILE_ERROR_MESSAGE), false); 
+    }
+};
 
 

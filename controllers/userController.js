@@ -47,7 +47,7 @@ userController.userSignIn = async(payload) => {
     if (!user.isOtpVerified || mobileNumber) {
         return createErrorResponse(RESPONSE_MESSAGE.VERIFY_OTP, ERROR_TYPES.FORBIDDEN, { email: normalizedEmail, mobileNumber });
     }
-    const jwtPayloadObject = { userId: user._id, userRole: user.userRole };
+    const jwtPayloadObject = { userId: user._id };
     const token = generateJWTAccessToken(jwtPayloadObject);
     return createSuccessResponse(RESPONSE_MESSAGE.SIGNED_IN, { userDetails: user, token });
 };

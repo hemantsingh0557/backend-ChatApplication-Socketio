@@ -2,24 +2,24 @@ import { allRoutes } from "../routes/index.js";
 import express from "express" ; 
 import cors from "cors" ; 
 import { authenticateToken } from "../services/authService.js";
-import { validateSchema } from "../utils/helperFunctions.js";
+import { fileFilter, validateSchema } from "../utils/helperFunctions.js";
 import multer from "multer";
 import { UPLOAD_FILES_DESTINATION } from "../utils/constants.js";
 import path from "path";
 
 
-
 const storage = multer.diskStorage({
-    destination : UPLOAD_FILES_DESTINATION ,
-    filename : function(req , file , cb ) {
-        cb(null , file.fieldname + "-" + Date.now() + path.extname(file.originalname) ) ;
-    } ,
-}) ;
+    destination: UPLOAD_FILES_DESTINATION,
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
+    },
+});
 
 const upload = multer({
     storage: storage,
-    limits: { fileSize: 10000000 },
-}).single("imageFile");
+    limits: { fileSize: 10000000 }, 
+    fileFilter: fileFilter,
+}).single("imageFile"); 
 
 
 
