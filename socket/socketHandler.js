@@ -1,7 +1,9 @@
+import { socketAuthService } from "../services/socketAuthService.js";
 import { SOCKET_EVENTS } from "../utils/constants.js";
 
 
 export const setupSocket = (io) => {
+    io.use(socketAuthService);
     io.on(SOCKET_EVENTS.CONNECTION, (socket) => {
         console.log("A user connected:", socket.id);
         

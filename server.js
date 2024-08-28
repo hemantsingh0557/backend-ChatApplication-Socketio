@@ -3,7 +3,7 @@ import { createServer } from "http";
 import { expressStartup } from "./startup/expressStartup.js";
 import { dbConnection } from "./startup/dbConnection.js";
 import config from "./config/index.js";
-import { setupSocket } from "./socket/index.js";
+import { setupSocket } from "./socket/socketHandler.js";
 import { Server } from "socket.io";
 
 const app = express();

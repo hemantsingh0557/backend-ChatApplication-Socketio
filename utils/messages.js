@@ -23,7 +23,12 @@ export const RESPONSE_MESSAGE = {
     INVALID_OTP : "Invalid OTP. Please enter the correct OTP" ,
     OTP_VERIFIED_SUCCESSFULLY : "OTP is verified successfully" ,
     VERIFY_OTP : "Please varify your otp" ,
-   
+    
+
+    // Authentication related messages
+    AUTHENTICATION_ERROR: "Authentication error",
+    TOKEN_MISSING: "Token is missing",
+    TOKEN_INVALID: "Token is invalid",
 
 } ;   
 
