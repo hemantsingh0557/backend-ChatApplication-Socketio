@@ -1,6 +1,14 @@
 
 
 
+import jwt from "jsonwebtoken" ; 
+import config from "../config/index.js";
+
+
+
+export const generateJWTAccessToken = (jwtPayloadObject) => {
+    return jwt.sign(jwtPayloadObject, config.auth.jwtSecret , { algorithm: "HS256" , expiresIn: "600s" });
+};
 
 
 
@@ -41,3 +49,7 @@ export const validateSchema = (schema) => {
         next();
     } ;
 } ;
+
+
+
+
