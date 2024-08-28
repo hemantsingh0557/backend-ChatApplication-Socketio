@@ -1,8 +1,8 @@
 import { RESPONSE_MESSAGE } from "../utils/messages.js";
 import { ERROR_TYPES } from "../utils/constants.js";
-import { createErrorResponse, createSuccessResponse } from "../utils/commonFunctions/responseHelper.js";
+import { createErrorResponse, createSuccessResponse } from "../utils/commonFunctions/responseHelper.js" ;
 
-export const fileController = {};
+export const fileController = {}; 
 
 fileController.uploadFile = async(payload) => {
     const { files } = payload;
@@ -14,4 +14,4 @@ fileController.uploadFile = async(payload) => {
         return createErrorResponse(RESPONSE_MESSAGE.FAILED_TO_UPLOAD_FILE, ERROR_TYPES.BAD_REQUEST , null );
     }
     return createSuccessResponse(RESPONSE_MESSAGE.FILE_UPLOADED_SUCCESSFULLY, { filePaths });
-};
+} ;

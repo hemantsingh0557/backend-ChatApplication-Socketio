@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "run": "nodemon server.js"
+    "run": "nodemon server.js",
+    "lint": "eslint .", 
+    "prettier:check": "prettier --check '**/*.js'"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,8 @@
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "express": "^4.19.2",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
