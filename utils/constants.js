@@ -29,6 +29,12 @@ export const SOCKET_EVENTS = {
     USER_LOGIN: "user login",
     USER_LOGOUT: "user logout",
     USER_STATUS_UPDATE: "user status update",
+
+    // for group events
+    JOIN_GROUP: "joinGroup",
+    SEND_GROUP_MESSAGE: "sendGroupMessage",
+    GROUP_MESSAGE_RECEIVED: "groupMessageReceived",
+    NEW_GROUP_CREATED: "newGroupCreated",
 };
 
 

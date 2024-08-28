@@ -11,7 +11,7 @@ export const userController = {} ;
 
 
 userController.userSignUp = async(payload) => {
-    const { name, age, email, mobileNumber, password } = payload;
+    const { name, age, email, mobileNumber, statusMessage , password } = payload;
     const normalizedEmail = email.toLowerCase();
     const existingUser = await userService.findUserInDB(normalizedEmail, mobileNumber);
     if (existingUser) {
@@ -23,6 +23,7 @@ userController.userSignUp = async(payload) => {
         age,
         email: normalizedEmail,
         mobileNumber,
+        statusMessage ,
         password: hashedPassword,
         isOtpVerified: false,
     };

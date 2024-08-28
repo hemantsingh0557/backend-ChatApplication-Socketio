@@ -28,4 +28,8 @@ userService.resetPasswordInDb = async(userId, hashedPassword) => {
     return { success: true };
 };
 
+userService.updateUserStatus = async(userId, statusUpdate) => {
+    await UserModel.findByIdAndUpdate(userId, statusUpdate, { new: true });
+} ;
+
 export { userService };

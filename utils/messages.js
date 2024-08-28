@@ -30,6 +30,29 @@ export const RESPONSE_MESSAGE = {
     TOKEN_MISSING: "Token is missing",
     TOKEN_INVALID: "Token is invalid",
 
+
+
+    // chat related message
+    CHAT_NOT_FOUND: "Chat not found",
+    CHAT_FOUND: "Chat found",
+    CHAT_ALREADY_EXISTS: "Chat already exists",
+    CHAT_MESSAGE_FOUND: "Chat message found",
+    CHAT_MESSAGE_NOT_FOUND: "Chat message not found",
+    CHAT_MESSAGE_SENT: "Chat message sent",
+    CHAT_MESSAGE_NOT_SENT: "Chat message is not sent",
+    CHAT_NOT_CREATED: "Chat can not be created ",
+    CHAT_NOT_DELETED: "Chat not deleted ",
+    CHAT_DELETED: "Chat deleted ",
+
+    GROUP_NOT_FOUND : "Group not found" ,
+    GROUP_FOUND : "Group found" ,
+    GROUP_NOT_DELETED : "Group not deletd" ,
+    GROUP_DELETED : "Group deleted" ,
+    GROUP_NOT_CREATED : "Group not creaded" ,
+    GROUP_CREATED : "Group created" ,
+    GROUP_MEMBERS_NOT_FOUND : "Group members not found " ,
+    GROUP_MEMBERS_FETCHED : "Group members fetched " ,
+
 } ;   
 
 

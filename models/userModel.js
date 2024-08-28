@@ -28,16 +28,27 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    statusMessage: {
+        type: String,
+        default: "Hey there! I am using this app." ,
+    },
+    online: {
+        type: Boolean,
+        default: false,
+    },
+    lastSeen: {
+        type: Date,
+    },
     isOtpVerified: {
         type: Boolean,
-        required: true,
+        required: false ,
     } ,
 } , { timestamps : true } );
 
 
 export const UserModel = mongoose.model( "User" , userSchema) ;   
 
-
+ 
 
 
 
