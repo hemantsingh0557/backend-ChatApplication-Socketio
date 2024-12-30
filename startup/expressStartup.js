@@ -26,9 +26,9 @@ const upload = multer({
 const handler = (controller) =>{
     return (req , res) => {
         const payload = {
-            ...(res.body || {}) ,
-            ...(res.params || {}) ,
-            ...(res.query || {}) ,
+            ...(req.body || {}) ,
+            ...(req.params || {}) ,
+            ...(req.query || {}) ,
             userId : req.userId ,
             files : req.files ,
         } ;
